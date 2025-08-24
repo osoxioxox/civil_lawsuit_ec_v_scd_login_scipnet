@@ -149,7 +149,7 @@ p {
 </div>
 
 <!-- 🔑 Login Form -->
-<form autocomplete="off">
+<form autocomplete="off" onsubmit="return false;">
   <p style="font-size:55px; font-weight: bold; font-family:'Inter', sans-serif;">SCiPNET LOGIN</p>
   
   <div class="input-container">
@@ -157,8 +157,8 @@ p {
   </div>
   
   <div class="input-container">
-    <input onkeyup="document.getElementById('start_button').disabled = this.value.length === 0;"
-           class="input-field" type="password" placeholder="Password">
+    <input id="password" class="input-field" type="password" placeholder="Password"
+           onkeyup="document.getElementById('start_button').disabled = this.value.length === 0;">
   </div>
   
   <!-- ✅ Fixed button -->
@@ -171,5 +171,15 @@ p {
   <button type="button" class="btn2">Forgot password?</button>
 </form>
 
+<script>
+// ✅ Allow pressing Enter in password field to act as Login
+document.getElementById("password").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        document.getElementById("start_button").click();
+    }
+});
+</script>
+
 </body>
 </html>
+
