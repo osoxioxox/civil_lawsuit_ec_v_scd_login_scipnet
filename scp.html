@@ -148,23 +148,25 @@ p {
     </p>
 </div>
 
-<!-- 🔑 Login Form -->
-<form autocomplete="off">
+<form autocomplete="off" 
+      onsubmit="window.open('https://docs.google.com/document/d/1riX2qaLoVD6-fxf3TaY1VmVGYK3l8GYp4Of47vQOhJU/edit?usp=sharing','_parent'); return false;">
+
   <p style="font-size:55px; font-weight: bold; font-family:'Inter', sans-serif;">SCiPNET LOGIN</p>
-  
+
   <div class="input-container">
     <input class="input-field" type="text" placeholder="Username" name="usrnm">
   </div>
- 
+
   <div class="input-container">
-    <input onkeyup="document.getElementById('start_button').disabled = this.value.length === 0;" 
+    <input onkeyup="document.getElementById('start_button').disabled = this.value.length === 0;"
            class="input-field" type="password" placeholder="Password">
   </div>
- 
-  <button id="start_button" class="btn" 
-          onclick="window.open('https://docs.google.com/document/d/1riX2qaLoVD6-fxf3TaY1VmVGYK3l8GYp4Of47vQOhJU/edit?usp=sharing','_parent')" enabled>
-    Login
-  </button>
+
+  <button id="start_button" class="btn">Login</button>
+  <br>
+  <button type="button" class="btn2">Forgot password?</button>
+</form>
+
  
   <br>
   <button type="button" class="btn2">Forgot password?</button>
@@ -172,5 +174,6 @@ p {
 
 </body>
 </html>
+
 
 
