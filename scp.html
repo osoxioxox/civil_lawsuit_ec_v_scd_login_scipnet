@@ -1,0 +1,174 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=PT+Root+UI:wght@400;600&family=Recursive:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+body {
+    font-family: 'Inter', sans-serif; /* body font */
+    background-color: white;
+    margin: 0;
+    padding: 20px;
+    color: black;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* 🔴 Warning Box */
+.warning-box {
+    position: relative;
+    max-width: 650px;
+    margin: 30px auto;
+    padding: 20px;
+    border: 2px solid maroon;
+    border-radius: 8px;
+    color: black; /* text inside = black */
+    background: #d3d3d3; /* light gray */
+    box-shadow: 0 0 15px rgba(0,0,0,0.6);
+    font-family: 'Inter', sans-serif; /* consistent with body */
+    text-align: center;
+}
+
+.warning-box h1 {
+    font-size: 28px;
+    font-weight: bold;
+    color: darkred; /* "WARNING" dark red */
+    margin-bottom: 15px;
+}
+
+.warning-box p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: black;
+}
+
+.warning-box p:last-of-type {
+    font-style: italic; /* last paragraph italicized */
+}
+
+/* 🔑 Login Form */
+form {
+    max-width: 450px;
+    text-align: center;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    color: black;
+    font-family: 'PT Root UI', sans-serif; /* UI font */
+}
+
+.input-container {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    transition: border-color 0.5s, border-width 0.3s;
+    font-family: 'PT Root UI', sans-serif;
+}
+
+.input-field:focus {
+    border-color: maroon;
+    border-width: 2px;
+}
+
+.btn {
+    background-color: maroon;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    opacity: 0.9;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    font-family: 'PT Root UI', sans-serif;
+}
+
+.btn:hover {
+    opacity: 1;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.btn:active {
+    transform: translateY(1px);
+    box-shadow: none;
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn2 {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 10px;
+    color: maroon;
+    font-family: 'PT Root UI', sans-serif;
+}
+
+p {
+    margin-bottom: 5%;
+}
+
+/* Example monospaced text */
+.code-text {
+    font-family: 'Recursive', monospace;
+}
+</style>
+</head>
+<body>
+
+<!-- 🔴 Warning Box -->
+<div class="warning-box">
+    <h1>WARNING</h1>
+    <p>
+        The following file is for <i>security clearance level 4</i> personnel <b>only</b>.
+    </p>
+    <p>
+        Unauthorized access is <b>forbidden</b>.
+    </p>
+    <p>
+        You have been warned – Scientific Department Director, Doctor Caprit.
+    </p>
+    <p>
+        You have a file in your inbox, please log in to your SCiPNET account to continue.
+    </p>
+</div>
+
+<!-- 🔑 Login Form -->
+<form autocomplete="off">
+  <p style="font-size:55px; font-weight: bold; font-family:'Inter', sans-serif;">SCiPNET LOGIN</p>
+  
+  <div class="input-container">
+    <input class="input-field" type="text" placeholder="Username" name="usrnm">
+  </div>
+ 
+  <div class="input-container">
+    <input onkeyup="document.getElementById('start_button').disabled = this.value.length === 0;" 
+           class="input-field" type="password" placeholder="Password">
+  </div>
+ 
+  <button id="start_button" class="btn" 
+          onclick="window.open('YOUR_URL_HERE','_parent')" disabled>
+    Login
+  </button>
+ 
+  <br>
+  <button type="button" class="btn2">Forgot password?</button>
+</form>
+
+</body>
+</html>
