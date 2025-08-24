@@ -1,6 +1,6 @@
 <html>
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1"> 
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=PT+Root+UI:wght@400;600&family=Recursive:wght@400;600&display=swap" rel="stylesheet">
@@ -148,32 +148,28 @@ p {
     </p>
 </div>
 
-<form autocomplete="off" 
-      onsubmit="window.open('https://docs.google.com/document/d/1riX2qaLoVD6-fxf3TaY1VmVGYK3l8GYp4Of47vQOhJU/edit?usp=sharing','_parent'); return false;">
-
+<!-- 🔑 Login Form -->
+<form autocomplete="off">
   <p style="font-size:55px; font-weight: bold; font-family:'Inter', sans-serif;">SCiPNET LOGIN</p>
-
+  
   <div class="input-container">
     <input class="input-field" type="text" placeholder="Username" name="usrnm">
   </div>
-
+  
   <div class="input-container">
     <input onkeyup="document.getElementById('start_button').disabled = this.value.length === 0;"
            class="input-field" type="password" placeholder="Password">
   </div>
-
-  <button id="start_button" class="btn">Login</button>
-  <br>
-  <button type="button" class="btn2">Forgot password?</button>
-</form>
-
- 
+  
+  <!-- ✅ Fixed button -->
+  <button id="start_button" type="button" class="btn"
+          onclick="window.open('https://docs.google.com/document/d/1riX2qaLoVD6-fxf3TaY1VmVGYK3l8GYp4Of47vQOhJU/edit?usp=sharing','_parent')">
+    Login
+  </button>
+  
   <br>
   <button type="button" class="btn2">Forgot password?</button>
 </form>
 
 </body>
 </html>
-
-
-
